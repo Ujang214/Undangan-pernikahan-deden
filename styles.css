@@ -535,3 +535,14 @@ footer p {
     display: block;
   }
 }
+
+
+/* PERANGKAT SELULER (hingga 768px) */
+@media (max-width: 768px) {
+  /* KODE YANG DITAMBAHKAN */
+}
+
+/* Desktop dan Perangkat Lebih Besar (min-width: 769px) */
+@media (min-width: 769px) {
+  /* KODE YANG DITAMBAHKAN */
+}
