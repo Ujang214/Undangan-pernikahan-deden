@@ -452,7 +452,7 @@ footer p {
 }
 
 /* Gaya untuk perangkat seluler */
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .hero h1 {
     font-size: 60px;
   }
@@ -531,6 +531,7 @@ footer p {
   .hero h3 {
     font-size: 26px;
   }
+}
 
   /* Gaya untuk perangkat desktop/laptop */
   @media (min-width: 769px) {
