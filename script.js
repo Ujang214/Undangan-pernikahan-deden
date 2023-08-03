@@ -1,5 +1,6 @@
-// Mendapatkan referer dari halaman saat ini
-const currentURL = window.location.href;
+function redirectToHomePage() {
+    window.location.href = "https://undanganpernikahandoden.netlify.app/"; // Ganti URL halaman awal dengan URL yang sesuai
+}
 
 // Fungsi untuk menambahkan URL referer pada tombol 'Dapatkan Lokasi'
 function setReferrer() {
@@ -10,3 +11,9 @@ function setReferrer() {
 
 // Memanggil fungsi untuk menambahkan URL referer saat halaman dimuat
 document.addEventListener("DOMContentLoaded", setReferrer);
+
+// Menambahkan event listener untuk handle form submit
+document.getElementById("bukuTamuForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Mencegah form dikirimkan langsung ke server
+    redirectToHomePage(); // Memanggil fungsi untuk mengarahkan ke halaman awal
+});

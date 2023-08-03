@@ -22,7 +22,7 @@
       <menu class="navbar_menu">
         <a href="#akad">Akad</a>
         <a href="#resepsi">Resepsi</a>
-        <a href="#buku_tamu ">Buku Tamu</a>
+        <a href="#buku_tamu ">RSVD</a>
         <a href="#map">Map</a>
         <a href="#gallery">Gallery</a>
       </menu>
@@ -89,7 +89,7 @@
       <div class="line"></div>
     </div>
     <div class="buku_tamu_container">
-      <form action="https://formspree.io/f/xleydnnp" method="post">
+      <form action="https://formspree.io/f/xleydnnp" method="post" onsubmit="return redirectToHomePage()">
         <input required type="text" name="nama" placeholder="Nama" />
         <textarea name="ucapan" placeholder="Ucapan & Doa" cols="30" rows="8"></textarea>
         <select name="kehadiran">
@@ -208,16 +208,24 @@
   <!------------------------- END FOOTER ------------------------->
 </body>
 <script>
+  function redirectToHomePage(event) {
+          event.preventDefault(); // Mencegah form dikirimkan langsung ke server
+
+          setTimeout(function () {
+            window.location.href = "https://undanganpernikahandoden.netlify.app/"; // Ganti URL halaman awal dengan URL yang sesuai
+          }, 3000); // Mengarahkan kembali ke halaman awal setelah 3 detik (3000 milidetik)
+        }
+
   function showQRCode() {
     var qrCodeImg = document.getElementById("qrCode");
     var qrCodeButton = document.querySelector(".qr-code-button");
 
     if (qrCodeImg.style.display === "none") {
       qrCodeImg.style.display = "block";
-      qrCodeButton.textContent = "Sembunyikan Kode QR";
+      qrCodeButton.textContent = "Sembunyikan Kode QR Bank ABC";
     } else {
       qrCodeImg.style.display = "none";
-      qrCodeButton.textContent = "Tampilkan Kode QR Bank Mandiri";
+      qrCodeButton.textContent = "Tampilkan Kode QR Bank ABC";
     }
   }
 </script>
